@@ -37,6 +37,7 @@
             btnChange = new Button();
             btnDelete = new Button();
             btnOrder = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)picBoxTovar).BeginInit();
             SuspendLayout();
             // 
@@ -53,34 +54,38 @@
             // lblName
             // 
             lblName.AutoSize = true;
+            lblName.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblName.Location = new Point(193, 3);
             lblName.Name = "lblName";
-            lblName.Size = new Size(116, 20);
+            lblName.Size = new Size(117, 20);
             lblName.TabIndex = 1;
             lblName.Text = "Наименование";
             // 
             // lblDescription
             // 
             lblDescription.AutoSize = true;
-            lblDescription.Location = new Point(193, 33);
+            lblDescription.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDescription.Location = new Point(193, 23);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(79, 20);
+            lblDescription.Size = new Size(83, 20);
             lblDescription.TabIndex = 2;
             lblDescription.Text = "Описание";
             // 
             // lblManufacture
             // 
             lblManufacture.AutoSize = true;
-            lblManufacture.Location = new Point(193, 64);
+            lblManufacture.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblManufacture.Location = new Point(193, 43);
             lblManufacture.Name = "lblManufacture";
-            lblManufacture.Size = new Size(118, 20);
+            lblManufacture.Size = new Size(125, 20);
             lblManufacture.TabIndex = 3;
             lblManufacture.Text = "Производитель";
             // 
             // lblPrice
             // 
             lblPrice.AutoSize = true;
-            lblPrice.Location = new Point(203, 103);
+            lblPrice.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPrice.Location = new Point(193, 64);
             lblPrice.Name = "lblPrice";
             lblPrice.Size = new Size(45, 20);
             lblPrice.TabIndex = 4;
@@ -89,15 +94,17 @@
             // lblDiscount
             // 
             lblDiscount.AutoSize = true;
-            lblDiscount.Location = new Point(560, 64);
+            lblDiscount.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDiscount.Location = new Point(368, 64);
             lblDiscount.Name = "lblDiscount";
-            lblDiscount.Size = new Size(111, 20);
+            lblDiscount.Size = new Size(114, 20);
             lblDiscount.TabIndex = 5;
             lblDiscount.Text = "Размер скидки";
             // 
             // btnChange
             // 
-            btnChange.Location = new Point(401, 161);
+            btnChange.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChange.Location = new Point(293, 94);
             btnChange.Name = "btnChange";
             btnChange.Size = new Size(159, 29);
             btnChange.TabIndex = 6;
@@ -107,7 +114,8 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(269, 161);
+            btnDelete.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDelete.Location = new Point(193, 94);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 29);
             btnDelete.TabIndex = 7;
@@ -117,17 +125,28 @@
             // 
             // btnOrder
             // 
-            btnOrder.Location = new Point(613, 161);
+            btnOrder.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnOrder.Location = new Point(458, 94);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(94, 29);
             btnOrder.TabIndex = 8;
             btnOrder.Text = "Заказать";
             btnOrder.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(302, 64);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 20);
+            label1.TabIndex = 9;
+            label1.Text = "Скидка:";
+            // 
             // UserControlTovar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label1);
             Controls.Add(btnOrder);
             Controls.Add(btnDelete);
             Controls.Add(btnChange);
@@ -138,7 +157,7 @@
             Controls.Add(lblName);
             Controls.Add(picBoxTovar);
             Name = "UserControlTovar";
-            Size = new Size(831, 209);
+            Size = new Size(831, 136);
             ((System.ComponentModel.ISupportInitialize)picBoxTovar).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -155,5 +174,6 @@
         private Button btnChange;
         private Button btnDelete;
         private Button btnOrder;
+        private Label label1;
     }
 }

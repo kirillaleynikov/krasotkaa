@@ -39,7 +39,7 @@ namespace krasotkaa
             using (DB_AleynikovContext db = new DB_AleynikovContext())
             {
                 List<Product> products = db.Products.ToList();
-
+                var countItems = products.Count;
                 switch (cmbSort.SelectedIndex)
                 {
                     case 0: products = db.Products.ToList(); break;
@@ -57,7 +57,7 @@ namespace krasotkaa
                 {
                     products = products.Where(x => x.ProductName.ToLower().Contains(txtBoxSearch.Text.ToLower())).ToList();
                 }
-                var countItems = products.Count;
+
                 //int id = GetManufacture();
                 //if (id != 0)
                 //    products = products.Where(x => x.ProductManufacturer == id).ToList();
@@ -80,6 +80,12 @@ namespace krasotkaa
         {
             if (User != null)
                 lblUser.Text = User;
+            switch (Role)
+            {
+                case 1: btnAddProduct.Visible = false; break;
+                case 2: btnAddProduct.Visible = false; break;
+                case 3: btnAddProduct.Visible = true; break;
+            }
         }
 
         //private int GetManufacture()

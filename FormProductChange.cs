@@ -22,6 +22,7 @@ namespace krasotkaa
             FormProducts = formProducts;
             LoadData();
             LoadItem();
+            panel1.BackColor = Color.FromArgb(255, 204, 153);
 
         }
 
@@ -105,5 +106,12 @@ namespace krasotkaa
                 }
             }
         }
+
+        private void FormProductChange_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

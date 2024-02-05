@@ -64,8 +64,12 @@ namespace krasotkaa
         {
             if (Role == 1)
             {
-                btnDelete.Visible = true;
-                btnChange.Visible = true;
+                btnDelete.Visible = false;
+                btnChange.Visible = false;
+            }
+            if (Role == 2)
+            {
+                btnDelete.Visible = false;
             }
         }
 
@@ -94,9 +98,9 @@ namespace krasotkaa
                     //var item = db.Orders.FirstOrDefault(x => x.OrderComposition == Item.ProductArticleNumber && x.OrderStatus == 2);
                     //if (item != null)
                     //{
-                        db.Products.Remove(Item);
-                        db.SaveChanges();
-                        FormProducts.LoadData();
+                    db.Products.Remove(Item);
+                    db.SaveChanges();
+                    FormProducts.LoadData();
                     //}
                     //else
                     //    MessageBox.Show("Невозможно удалить, так как товар находится в заказе", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);

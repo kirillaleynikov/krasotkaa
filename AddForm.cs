@@ -20,6 +20,7 @@ namespace krasotkaa
             InitializeComponent();
             FormProducts = form;
             LoadData();
+            panel1.BackColor = Color.FromArgb(255, 204, 153);
         }
 
         private void LoadData()
