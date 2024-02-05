@@ -13,6 +13,6 @@ namespace krasotkaa.Context
         public string UserPassword { get; set; } = null!;
         public int UserRole { get; set; }
 
-        public virtual Role Role { get; set; } = null!;
+        public virtual Role UserRoleNavigation { get; set; } = null!;
     }
 }

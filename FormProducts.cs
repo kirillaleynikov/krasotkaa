@@ -49,9 +49,14 @@ namespace krasotkaa
                 switch (cmbFiltr.SelectedIndex)
                 {
                     case 0: products = db.Products.ToList(); break;
-                    case 1: products = db.Products.Where(x => x.ProductDiscountAmount > 0 && x.ProductDiscountAmount < 4).ToList(); break;
+                    case 1: products = db.Products.Where(x => x.ProductDiscountAmount > 0 && x.ProductDiscountAmount < 9.99).ToList(); break;
+                    case 2: products = db.Products.Where(x => x.ProductDiscountAmount > 10 && x.ProductDiscountAmount < 14.99).ToList(); break;
+                    case 3: products = db.Products.Where(x => x.ProductDiscountAmount > 15).ToList(); break;
                 }
-
+                if (txtBoxSearch.Text != null)
+                {
+                    products = products.Where(x => x.ProductName.ToLower().Contains(txtBoxSearch.Text.ToLower())).ToList();
+                }
                 var countItems = products.Count;
                 //int id = GetManufacture();
                 //if (id != 0)
@@ -63,6 +68,8 @@ namespace krasotkaa
 
                     flowLayoutPanel1.Controls.Add(control);
                 }
+
+                toolStripStatusLabel1.Text = $"Количество записей: {flowLayoutPanel1.Controls.Count} из {countItems}";
 
             }
 
@@ -119,13 +126,20 @@ namespace krasotkaa
 
         private void txtBoxSearch_TextChanged(object sender, EventArgs e)
         {
-
+            LoadData();
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             AddForm addForm = new AddForm(this);
             addForm.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+            Form form = Application.OpenForms[0];
+            form.Show();
         }
     }
 }

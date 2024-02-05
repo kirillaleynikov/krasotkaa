@@ -61,7 +61,6 @@ namespace krasotkaa
 
                 entity.Property(e => e.OrderClientFio)
                     .HasMaxLength(300)
-                    .IsUnicode(false)
                     .HasColumnName("OrderClientFIO");
 
                 entity.Property(e => e.OrderCodeForGet).HasMaxLength(100);
@@ -107,8 +106,6 @@ namespace krasotkaa
                 entity.ToTable("Product");
 
                 entity.Property(e => e.ProductArticleNumber).HasMaxLength(100);
-
-                entity.Property(e => e.ProductCost).HasColumnType("money");
 
                 entity.Property(e => e.ProductDescription).HasMaxLength(100);
 
@@ -192,7 +189,7 @@ namespace krasotkaa
 
                 entity.Property(e => e.UserSurname).HasMaxLength(100);
 
-                entity.HasOne(d => d.Role)
+                entity.HasOne(d => d.UserRoleNavigation)
                     .WithMany(p => p.Users)
                     .HasForeignKey(d => d.UserRole)
                     .OnDelete(DeleteBehavior.ClientSetNull)

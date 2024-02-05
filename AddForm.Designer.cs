@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddForm));
             label1 = new Label();
             txtBoxArticle = new TextBox();
             txtBoxName = new TextBox();
@@ -132,6 +133,7 @@
             // 
             numericUpDownCost.DecimalPlaces = 2;
             numericUpDownCost.Location = new Point(183, 170);
+            numericUpDownCost.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             numericUpDownCost.Name = "numericUpDownCost";
             numericUpDownCost.Size = new Size(150, 27);
             numericUpDownCost.TabIndex = 8;
@@ -222,6 +224,7 @@
             // numericUpDownQuantityInStock
             // 
             numericUpDownQuantityInStock.Location = new Point(246, 456);
+            numericUpDownQuantityInStock.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
             numericUpDownQuantityInStock.Name = "numericUpDownQuantityInStock";
             numericUpDownQuantityInStock.Size = new Size(150, 27);
             numericUpDownQuantityInStock.TabIndex = 19;
@@ -328,6 +331,7 @@
             Controls.Add(txtBoxName);
             Controls.Add(txtBoxArticle);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddForm";
             Text = "Добавление товаров";
             ((System.ComponentModel.ISupportInitialize)numericUpDownCost).EndInit();

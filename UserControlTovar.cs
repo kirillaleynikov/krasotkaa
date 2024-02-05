@@ -91,15 +91,15 @@ namespace krasotkaa
             {
                 using (DB_AleynikovContext db = new DB_AleynikovContext())
                 {
-                    var item = db.Orders.FirstOrDefault(x => x.OrderComposition == Item.ProductArticleNumber && x.OrderStatus == 2);
-                    if (item != null)
-                    {
+                    //var item = db.Orders.FirstOrDefault(x => x.OrderComposition == Item.ProductArticleNumber && x.OrderStatus == 2);
+                    //if (item != null)
+                    //{
                         db.Products.Remove(Item);
                         db.SaveChanges();
                         FormProducts.LoadData();
-                    }
-                    else
-                        MessageBox.Show("Невозможно удалить, так как товар находится в заказе", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
+                    //else
+                    //    MessageBox.Show("Невозможно удалить, так как товар находится в заказе", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
