@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             picBoxTovar = new PictureBox();
             lblName = new Label();
             lblDescription = new Label();
@@ -38,7 +39,10 @@
             btnDelete = new Button();
             btnOrder = new Button();
             label1 = new Label();
+            AddToOrderContextMenuStrip1 = new ContextMenuStrip(components);
+            добавитьКЗаказуToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)picBoxTovar).BeginInit();
+            AddToOrderContextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // picBoxTovar
@@ -142,6 +146,21 @@
             label1.TabIndex = 9;
             label1.Text = "Скидка:";
             // 
+            // AddToOrderContextMenuStrip1
+            // 
+            AddToOrderContextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            AddToOrderContextMenuStrip1.Items.AddRange(new ToolStripItem[] { добавитьКЗаказуToolStripMenuItem });
+            AddToOrderContextMenuStrip1.Name = "contextMenuStrip1";
+            AddToOrderContextMenuStrip1.Size = new Size(211, 56);
+            AddToOrderContextMenuStrip1.Opening += AddToOrderContextMenuStrip1_Opening;
+            AddToOrderContextMenuStrip1.Click += AddToOrderContextMenuStrip1_Click;
+            // 
+            // добавитьКЗаказуToolStripMenuItem
+            // 
+            добавитьКЗаказуToolStripMenuItem.Name = "добавитьКЗаказуToolStripMenuItem";
+            добавитьКЗаказуToolStripMenuItem.Size = new Size(210, 24);
+            добавитьКЗаказуToolStripMenuItem.Text = "Добавить к заказу";
+            // 
             // UserControlTovar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -159,6 +178,7 @@
             Name = "UserControlTovar";
             Size = new Size(831, 136);
             ((System.ComponentModel.ISupportInitialize)picBoxTovar).EndInit();
+            AddToOrderContextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -175,5 +195,7 @@
         private Button btnDelete;
         private Button btnOrder;
         private Label label1;
+        private ContextMenuStrip AddToOrderContextMenuStrip1;
+        private ToolStripMenuItem добавитьКЗаказуToolStripMenuItem;
     }
 }

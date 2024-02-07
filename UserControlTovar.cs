@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,16 +21,25 @@ namespace krasotkaa
         private FormProducts FormProducts;
         private int Role;
         private string User;
+        private bool ViewOrder;
+        private FormOrder FormOrder;
 
-        public UserControlTovar(Product item, FormProducts form, int role, string user)
+        public UserControlTovar(Product item, FormProducts form, int role, string user/*, bool viewOrder, FormOrder formOrder*/)
         {
+            InitializeComponent();
             Item = item;
             FormProducts = form;
             Role = role;
             User = user;
-            InitializeComponent();
+            //ViewOrder = viewOrder;
+            //FormOrder = formOrder;
+
             CreateItem();
             RoleCheck();
+
+       
+
+
         }
 
         private void CreateItem()
@@ -108,6 +118,14 @@ namespace krasotkaa
             }
         }
 
+        private void AddToOrderContextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
 
+        }
+
+        private void AddToOrderContextMenuStrip1_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

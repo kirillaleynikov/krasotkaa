@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace krasotkaa
 {
     public partial class Autorization : Form
     {
+        private bool Captcha = false;
+        private int timer = 0;
         private string? UserName;
         public Autorization()
         {
@@ -27,6 +30,16 @@ namespace krasotkaa
             {
                 var user = db.Users.FirstOrDefault(x => x.UserLogin == txtLogin.Text && x.UserPassword == txtPassword.Text);
 
+                //if (Captcha == true)
+                //{
+                //    if (show_form_captcha() != DialogResult.Yes)
+                //    {
+                //        MessageBox.Show("Неверный логин или пароль!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //        block_btn();
+                //        return;
+                //    }
+                //}
+
                 if (user != null)
                 {
                     var role = db.Roles.FirstOrDefault(x => x.RoleId == user.UserRole);
@@ -36,8 +49,19 @@ namespace krasotkaa
                     OpenForm(role.RoleId);
                 }
                 else
-                    MessageBox.Show("Некорректные данные", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    MessageBox.Show("Неверный логин или пароль!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (Captcha) block_btn();
+                    Captcha = true;
+                }
             }
+        }
+
+        private void block_btn()
+        {
+            timer1.Interval = 1000;
+            btnEnter.Enabled = false;
+            timer1.Start();
         }
 
         private void OpenForm(int role)
@@ -48,6 +72,7 @@ namespace krasotkaa
             FormProducts form = new FormProducts(UserName!, role);
             form.ShowDialog();
             UserName = null;
+            Captcha = false;
         }
 
         private void btnGuest_Click(object sender, EventArgs e)
@@ -72,6 +97,26 @@ namespace krasotkaa
         private void button1_MouseLeave(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer += 1;
+            if (timer == 10)
+            {
+                timer1.Stop();
+                timer = 0;
+                btnEnter.Enabled = true;
+            }
+        }
+
+        private DialogResult show_form_captcha()
+        {
+            FormCaptcha form = new FormCaptcha();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+            return form.DialogResult;
         }
     }
 }

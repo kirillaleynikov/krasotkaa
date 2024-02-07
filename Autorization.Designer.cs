@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Autorization));
             btnEnter = new Button();
             btnGuest = new Button();
@@ -36,6 +37,7 @@
             button1 = new Button();
             label1 = new Label();
             panel1 = new Panel();
+            timer1 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -111,6 +113,10 @@
             panel1.Size = new Size(804, 94);
             panel1.TabIndex = 6;
             // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // Autorization
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -140,5 +146,6 @@
         private Button button1;
         private Label label1;
         private Panel panel1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

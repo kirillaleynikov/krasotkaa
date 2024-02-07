@@ -64,7 +64,7 @@ namespace krasotkaa
 
                 foreach (Product item in products)
                 {
-                    UserControlTovar control = new UserControlTovar(item, this, Role, User);
+                    UserControlTovar control = new UserControlTovar(item, this, Role, User/*, false, new FormOrder(new List<Product>(), new FormProducts(User, Role))*/);
 
                     flowLayoutPanel1.Controls.Add(control);
                 }
