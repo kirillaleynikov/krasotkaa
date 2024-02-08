@@ -29,232 +29,261 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrder));
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            dateTimePickerOrderDate = new DateTimePicker();
-            dateTimePickerOrderDateDelivery = new DateTimePicker();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            lblOrderNumber = new Label();
-            lblOrderName = new Label();
-            numericUpDownAmount = new NumericUpDown();
-            lblPrice = new Label();
-            cmbPickPoint = new ComboBox();
-            txtFIO = new TextBox();
-            lblOrderCode = new Label();
-            lblOrderStatus = new Label();
-            btnOrder = new Button();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownAmount).BeginInit();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePickerOrderDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerOrderDateDelivery = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblOrderNumber = new System.Windows.Forms.Label();
+            this.lblOrderName = new System.Windows.Forms.Label();
+            this.numericUpDownAmount = new System.Windows.Forms.NumericUpDown();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.cmbPickPoint = new System.Windows.Forms.ComboBox();
+            this.txtFIO = new System.Windows.Forms.TextBox();
+            this.lblOrderCode = new System.Windows.Forms.Label();
+            this.lblOrderStatus = new System.Windows.Forms.Label();
+            this.btnOrder = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(352, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(150, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Оформление заказа";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(214, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(378, 52);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Оформление заказа";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(57, 70);
-            label2.Name = "label2";
-            label2.Size = new Size(77, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Название";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(12, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 33);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Название";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(57, 103);
-            label3.Name = "label3";
-            label3.Size = new Size(90, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Количество";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(12, 165);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 33);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Количество";
             // 
             // dateTimePickerOrderDate
             // 
-            dateTimePickerOrderDate.Location = new Point(57, 139);
-            dateTimePickerOrderDate.Name = "dateTimePickerOrderDate";
-            dateTimePickerOrderDate.Size = new Size(250, 27);
-            dateTimePickerOrderDate.TabIndex = 3;
+            this.dateTimePickerOrderDate.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerOrderDate.Location = new System.Drawing.Point(189, 218);
+            this.dateTimePickerOrderDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePickerOrderDate.Name = "dateTimePickerOrderDate";
+            this.dateTimePickerOrderDate.Size = new System.Drawing.Size(219, 41);
+            this.dateTimePickerOrderDate.TabIndex = 3;
             // 
             // dateTimePickerOrderDateDelivery
             // 
-            dateTimePickerOrderDateDelivery.Location = new Point(57, 184);
-            dateTimePickerOrderDateDelivery.Name = "dateTimePickerOrderDateDelivery";
-            dateTimePickerOrderDateDelivery.Size = new Size(250, 27);
-            dateTimePickerOrderDateDelivery.TabIndex = 4;
+            this.dateTimePickerOrderDateDelivery.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerOrderDateDelivery.Location = new System.Drawing.Point(189, 263);
+            this.dateTimePickerOrderDateDelivery.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePickerOrderDateDelivery.Name = "dateTimePickerOrderDateDelivery";
+            this.dateTimePickerOrderDateDelivery.Size = new System.Drawing.Size(219, 41);
+            this.dateTimePickerOrderDateDelivery.TabIndex = 4;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(64, 237);
-            label4.Name = "label4";
-            label4.Size = new Size(83, 20);
-            label4.TabIndex = 5;
-            label4.Text = "Стоимость";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(12, 320);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 33);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Стоимость";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(64, 273);
-            label5.Name = "label5";
-            label5.Size = new Size(105, 20);
-            label5.TabIndex = 6;
-            label5.Text = "Пункт выдачи";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(12, 362);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(178, 33);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Пункт выдачи";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(64, 321);
-            label6.Name = "label6";
-            label6.Size = new Size(128, 20);
-            label6.TabIndex = 7;
-            label6.Text = "ФИО получателя:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(12, 416);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(217, 33);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "ФИО получателя:";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(64, 362);
-            label7.Name = "label7";
-            label7.Size = new Size(114, 20);
-            label7.TabIndex = 8;
-            label7.Text = "Код получения";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(12, 473);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(190, 33);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Код получения";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(78, 412);
-            label8.Name = "label8";
-            label8.Size = new Size(101, 20);
-            label8.TabIndex = 9;
-            label8.Text = "Статус заказа";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(12, 532);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(165, 33);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Статус заказа";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(57, 37);
-            label9.Name = "label9";
-            label9.Size = new Size(106, 20);
-            label9.TabIndex = 10;
-            label9.Text = "Номер заказа";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(12, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(168, 33);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Номер заказа";
             // 
             // lblOrderNumber
             // 
-            lblOrderNumber.AutoSize = true;
-            lblOrderNumber.Location = new Point(182, 37);
-            lblOrderNumber.Name = "lblOrderNumber";
-            lblOrderNumber.Size = new Size(58, 20);
-            lblOrderNumber.TabIndex = 11;
-            lblOrderNumber.Text = "label10";
+            this.lblOrderNumber.AutoSize = true;
+            this.lblOrderNumber.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblOrderNumber.Location = new System.Drawing.Point(203, 79);
+            this.lblOrderNumber.Name = "lblOrderNumber";
+            this.lblOrderNumber.Size = new System.Drawing.Size(94, 33);
+            this.lblOrderNumber.TabIndex = 11;
+            this.lblOrderNumber.Text = "label10";
             // 
             // lblOrderName
             // 
-            lblOrderName.AutoSize = true;
-            lblOrderName.Location = new Point(183, 71);
-            lblOrderName.Name = "lblOrderName";
-            lblOrderName.Size = new Size(58, 20);
-            lblOrderName.TabIndex = 12;
-            lblOrderName.Text = "label11";
+            this.lblOrderName.AutoSize = true;
+            this.lblOrderName.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblOrderName.Location = new System.Drawing.Point(203, 123);
+            this.lblOrderName.Name = "lblOrderName";
+            this.lblOrderName.Size = new System.Drawing.Size(90, 33);
+            this.lblOrderName.TabIndex = 12;
+            this.lblOrderName.Text = "label11";
             // 
             // numericUpDownAmount
             // 
-            numericUpDownAmount.Location = new Point(182, 101);
-            numericUpDownAmount.Name = "numericUpDownAmount";
-            numericUpDownAmount.Size = new Size(150, 27);
-            numericUpDownAmount.TabIndex = 13;
+            this.numericUpDownAmount.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownAmount.Location = new System.Drawing.Point(189, 163);
+            this.numericUpDownAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDownAmount.Name = "numericUpDownAmount";
+            this.numericUpDownAmount.Size = new System.Drawing.Size(219, 41);
+            this.numericUpDownAmount.TabIndex = 13;
             // 
             // lblPrice
             // 
-            lblPrice.AutoSize = true;
-            lblPrice.Location = new Point(182, 237);
-            lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(58, 20);
-            lblPrice.TabIndex = 14;
-            lblPrice.Text = "label12";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPrice.Location = new System.Drawing.Point(186, 320);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(94, 33);
+            this.lblPrice.TabIndex = 14;
+            this.lblPrice.Text = "label12";
             // 
             // cmbPickPoint
             // 
-            cmbPickPoint.FormattingEnabled = true;
-            cmbPickPoint.Location = new Point(183, 270);
-            cmbPickPoint.Name = "cmbPickPoint";
-            cmbPickPoint.Size = new Size(378, 28);
-            cmbPickPoint.TabIndex = 15;
+            this.cmbPickPoint.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbPickPoint.FormattingEnabled = true;
+            this.cmbPickPoint.Location = new System.Drawing.Point(207, 362);
+            this.cmbPickPoint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbPickPoint.Name = "cmbPickPoint";
+            this.cmbPickPoint.Size = new System.Drawing.Size(460, 41);
+            this.cmbPickPoint.TabIndex = 15;
             // 
             // txtFIO
             // 
-            txtFIO.Location = new Point(198, 318);
-            txtFIO.Name = "txtFIO";
-            txtFIO.Size = new Size(152, 27);
-            txtFIO.TabIndex = 16;
+            this.txtFIO.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtFIO.Location = new System.Drawing.Point(235, 413);
+            this.txtFIO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFIO.Name = "txtFIO";
+            this.txtFIO.Size = new System.Drawing.Size(432, 41);
+            this.txtFIO.TabIndex = 16;
             // 
             // lblOrderCode
             // 
-            lblOrderCode.AutoSize = true;
-            lblOrderCode.Location = new Point(198, 362);
-            lblOrderCode.Name = "lblOrderCode";
-            lblOrderCode.Size = new Size(58, 20);
-            lblOrderCode.TabIndex = 17;
-            lblOrderCode.Text = "label13";
+            this.lblOrderCode.AutoSize = true;
+            this.lblOrderCode.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblOrderCode.Location = new System.Drawing.Point(214, 473);
+            this.lblOrderCode.Name = "lblOrderCode";
+            this.lblOrderCode.Size = new System.Drawing.Size(94, 33);
+            this.lblOrderCode.TabIndex = 17;
+            this.lblOrderCode.Text = "label13";
             // 
             // lblOrderStatus
             // 
-            lblOrderStatus.AutoSize = true;
-            lblOrderStatus.Location = new Point(198, 412);
-            lblOrderStatus.Name = "lblOrderStatus";
-            lblOrderStatus.Size = new Size(57, 20);
-            lblOrderStatus.TabIndex = 18;
-            lblOrderStatus.Text = "Новый";
+            this.lblOrderStatus.AutoSize = true;
+            this.lblOrderStatus.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblOrderStatus.Location = new System.Drawing.Point(207, 532);
+            this.lblOrderStatus.Name = "lblOrderStatus";
+            this.lblOrderStatus.Size = new System.Drawing.Size(93, 33);
+            this.lblOrderStatus.TabIndex = 18;
+            this.lblOrderStatus.Text = "Новый";
             // 
             // btnOrder
             // 
-            btnOrder.Location = new Point(313, 473);
-            btnOrder.Name = "btnOrder";
-            btnOrder.Size = new Size(243, 29);
-            btnOrder.TabIndex = 19;
-            btnOrder.Text = "Заказать";
-            btnOrder.UseVisualStyleBackColor = true;
-            btnOrder.Click += btnOrder_Click;
+            this.btnOrder.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOrder.Location = new System.Drawing.Point(415, 574);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(213, 56);
+            this.btnOrder.TabIndex = 19;
+            this.btnOrder.Text = "Заказать";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click_1);
             // 
             // FormOrder
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(884, 571);
-            Controls.Add(btnOrder);
-            Controls.Add(lblOrderStatus);
-            Controls.Add(lblOrderCode);
-            Controls.Add(txtFIO);
-            Controls.Add(cmbPickPoint);
-            Controls.Add(lblPrice);
-            Controls.Add(numericUpDownAmount);
-            Controls.Add(lblOrderName);
-            Controls.Add(lblOrderNumber);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(dateTimePickerOrderDateDelivery);
-            Controls.Add(dateTimePickerOrderDate);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "FormOrder";
-            Text = "OrderForm";
-            ((System.ComponentModel.ISupportInitialize)numericUpDownAmount).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(774, 641);
+            this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.lblOrderStatus);
+            this.Controls.Add(this.lblOrderCode);
+            this.Controls.Add(this.txtFIO);
+            this.Controls.Add(this.cmbPickPoint);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.numericUpDownAmount);
+            this.Controls.Add(this.lblOrderName);
+            this.Controls.Add(this.lblOrderNumber);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dateTimePickerOrderDateDelivery);
+            this.Controls.Add(this.dateTimePickerOrderDate);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FormOrder";
+            this.Text = "OrderForm";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

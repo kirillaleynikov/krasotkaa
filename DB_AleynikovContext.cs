@@ -33,7 +33,7 @@ namespace krasotkaa
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=LAPTOP-VJAV0JCF;Database=DB_Aleynikov;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=gogs.wsr.ru; Database=DB_Aleynikov2; User Id=479-20; Password=uCVoLSfI;");
             }
         }
 
@@ -57,9 +57,7 @@ namespace krasotkaa
 
             modelBuilder.Entity<Order>(entity =>
             {
-                entity.Property(e => e.OrderId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("OrderID");
+                entity.Property(e => e.OrderId).HasColumnName("OrderID");
 
                 entity.Property(e => e.OrderClientFio)
                     .HasMaxLength(300)
@@ -72,12 +70,6 @@ namespace krasotkaa
                 entity.Property(e => e.OrderDate).HasColumnType("datetime");
 
                 entity.Property(e => e.OrderDeliveryDate).HasColumnType("datetime");
-
-                entity.HasOne(d => d.OrderCompositionNavigation)
-                    .WithMany(p => p.Orders)
-                    .HasForeignKey(d => d.OrderComposition)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Orders_Product");
 
                 entity.HasOne(d => d.OrderPickPointNavigation)
                     .WithMany(p => p.Orders)
@@ -94,15 +86,12 @@ namespace krasotkaa
 
             modelBuilder.Entity<PickPoint>(entity =>
             {
-                entity.Property(e => e.PickPointId).ValueGeneratedNever();
-
                 entity.Property(e => e.PickPointAddress).HasMaxLength(500);
             });
 
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.HasKey(e => e.ProductArticleNumber)
-                    .HasName("PK__Product__2EA7DCD57E6BEF9E");
+                entity.HasKey(e => e.ProductArticleNumber);
 
                 entity.ToTable("Product");
 
@@ -137,6 +126,7 @@ namespace krasotkaa
                 entity.HasOne(d => d.ProductStatusNavigation)
                     .WithMany(p => p.Products)
                     .HasForeignKey(d => d.ProductStatus)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Product_StatusOfProduct");
             });
 
@@ -183,6 +173,11 @@ namespace krasotkaa
                 entity.Property(e => e.UserPatronymic).HasMaxLength(100);
 
                 entity.Property(e => e.UserSurname).HasMaxLength(100);
+
+                entity.HasOne(d => d.UserRoleNavigation)
+                    .WithMany(p => p.Users)
+                    .HasForeignKey(d => d.UserRole)
+                    .HasConstraintName("FK_Users_Role");
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -29,357 +29,382 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductChange));
-            label1 = new Label();
-            panel1 = new Panel();
-            btnEdit = new Button();
-            label14 = new Label();
-            txtBoxDescription = new TextBox();
-            label13 = new Label();
-            cmbStatus = new ComboBox();
-            txtBoxImage = new TextBox();
-            label12 = new Label();
-            label11 = new Label();
-            numericUpDownQuantityInStock = new NumericUpDown();
-            label10 = new Label();
-            numericUpDownDiscount = new NumericUpDown();
-            label9 = new Label();
-            cmbCategory = new ComboBox();
-            label8 = new Label();
-            cmbProvider = new ComboBox();
-            label7 = new Label();
-            cmbManufacture = new ComboBox();
-            label6 = new Label();
-            numericUpDownMaxDiscount = new NumericUpDown();
-            numericUpDownCost = new NumericUpDown();
-            label5 = new Label();
-            label4 = new Label();
-            txtBoxMeasure = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
-            txtBoxName = new TextBox();
-            txtBoxArticle = new TextBox();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownQuantityInStock).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownDiscount).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownMaxDiscount).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownCost).BeginInit();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtBoxDescription = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.txtBoxImage = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numericUpDownQuantityInStock = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numericUpDownDiscount = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbProvider = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbManufacture = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDownMaxDiscount = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownCost = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBoxMeasure = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBoxName = new System.Windows.Forms.TextBox();
+            this.txtBoxArticle = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantityInStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxDiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(321, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(381, 62);
-            label1.TabIndex = 28;
-            label1.Text = "Редактирование";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 29.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(280, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(321, 54);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Редактирование";
             // 
             // panel1
             // 
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1024, 115);
-            panel1.TabIndex = 56;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(896, 86);
+            this.panel1.TabIndex = 56;
             // 
             // btnEdit
             // 
-            btnEdit.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEdit.Location = new Point(565, 318);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(345, 29);
-            btnEdit.TabIndex = 83;
-            btnEdit.Text = "Редактировать";
-            btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEdit.Location = new System.Drawing.Point(494, 238);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(302, 36);
+            this.btnEdit.TabIndex = 83;
+            this.btnEdit.Text = "Редактировать";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // label14
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(480, 143);
-            label14.Name = "label14";
-            label14.Size = new Size(83, 20);
-            label14.TabIndex = 82;
-            label14.Text = "Описание";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(420, 107);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(67, 17);
+            this.label14.TabIndex = 82;
+            this.label14.Text = "Описание";
             // 
             // txtBoxDescription
             // 
-            txtBoxDescription.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtBoxDescription.Location = new Point(565, 140);
-            txtBoxDescription.Multiline = true;
-            txtBoxDescription.Name = "txtBoxDescription";
-            txtBoxDescription.Size = new Size(345, 172);
-            txtBoxDescription.TabIndex = 81;
+            this.txtBoxDescription.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxDescription.Location = new System.Drawing.Point(494, 105);
+            this.txtBoxDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxDescription.Multiline = true;
+            this.txtBoxDescription.Name = "txtBoxDescription";
+            this.txtBoxDescription.Size = new System.Drawing.Size(302, 130);
+            this.txtBoxDescription.TabIndex = 81;
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(18, 701);
-            label13.Name = "label13";
-            label13.Size = new Size(75, 20);
-            label13.TabIndex = 80;
-            label13.Text = "Наличие";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(16, 526);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 17);
+            this.label13.TabIndex = 80;
+            this.label13.Text = "Наличие";
             // 
             // cmbStatus
             // 
-            cmbStatus.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbStatus.FormattingEnabled = true;
-            cmbStatus.Location = new Point(219, 698);
-            cmbStatus.Name = "cmbStatus";
-            cmbStatus.Size = new Size(220, 28);
-            cmbStatus.TabIndex = 79;
+            this.cmbStatus.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Location = new System.Drawing.Point(192, 524);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(193, 25);
+            this.cmbStatus.TabIndex = 79;
             // 
             // txtBoxImage
             // 
-            txtBoxImage.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtBoxImage.Location = new Point(219, 641);
-            txtBoxImage.Name = "txtBoxImage";
-            txtBoxImage.Size = new Size(220, 28);
-            txtBoxImage.TabIndex = 78;
+            this.txtBoxImage.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxImage.Location = new System.Drawing.Point(192, 481);
+            this.txtBoxImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxImage.Name = "txtBoxImage";
+            this.txtBoxImage.Size = new System.Drawing.Size(193, 24);
+            this.txtBoxImage.TabIndex = 78;
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(20, 644);
-            label12.Name = "label12";
-            label12.Size = new Size(44, 20);
-            label12.TabIndex = 77;
-            label12.Text = "Фото";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(18, 483);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(36, 17);
+            this.label12.TabIndex = 77;
+            this.label12.Text = "Фото";
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(20, 588);
-            label11.Name = "label11";
-            label11.Size = new Size(170, 20);
-            label11.TabIndex = 76;
-            label11.Text = "Количество на складе";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(18, 441);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(136, 17);
+            this.label11.TabIndex = 76;
+            this.label11.Text = "Количество на складе";
             // 
             // numericUpDownQuantityInStock
             // 
-            numericUpDownQuantityInStock.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            numericUpDownQuantityInStock.Location = new Point(219, 586);
-            numericUpDownQuantityInStock.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
-            numericUpDownQuantityInStock.Name = "numericUpDownQuantityInStock";
-            numericUpDownQuantityInStock.Size = new Size(220, 28);
-            numericUpDownQuantityInStock.TabIndex = 75;
+            this.numericUpDownQuantityInStock.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownQuantityInStock.Location = new System.Drawing.Point(192, 440);
+            this.numericUpDownQuantityInStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDownQuantityInStock.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numericUpDownQuantityInStock.Name = "numericUpDownQuantityInStock";
+            this.numericUpDownQuantityInStock.Size = new System.Drawing.Size(192, 24);
+            this.numericUpDownQuantityInStock.TabIndex = 75;
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(20, 530);
-            label10.Name = "label10";
-            label10.Size = new Size(59, 20);
-            label10.TabIndex = 74;
-            label10.Text = "Скидка";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(18, 398);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 17);
+            this.label10.TabIndex = 74;
+            this.label10.Text = "Скидка";
             // 
             // numericUpDownDiscount
             // 
-            numericUpDownDiscount.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            numericUpDownDiscount.Location = new Point(219, 528);
-            numericUpDownDiscount.Name = "numericUpDownDiscount";
-            numericUpDownDiscount.Size = new Size(220, 28);
-            numericUpDownDiscount.TabIndex = 73;
+            this.numericUpDownDiscount.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownDiscount.Location = new System.Drawing.Point(192, 396);
+            this.numericUpDownDiscount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDownDiscount.Name = "numericUpDownDiscount";
+            this.numericUpDownDiscount.Size = new System.Drawing.Size(192, 24);
+            this.numericUpDownDiscount.TabIndex = 73;
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(20, 475);
-            label9.Name = "label9";
-            label9.Size = new Size(84, 20);
-            label9.TabIndex = 72;
-            label9.Text = "Категория";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(18, 356);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 17);
+            this.label9.TabIndex = 72;
+            this.label9.Text = "Категория";
             // 
             // cmbCategory
             // 
-            cmbCategory.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbCategory.FormattingEnabled = true;
-            cmbCategory.Location = new Point(219, 472);
-            cmbCategory.Name = "cmbCategory";
-            cmbCategory.Size = new Size(220, 28);
-            cmbCategory.TabIndex = 71;
+            this.cmbCategory.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(192, 354);
+            this.cmbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(193, 25);
+            this.cmbCategory.TabIndex = 71;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(20, 417);
-            label8.Name = "label8";
-            label8.Size = new Size(92, 20);
-            label8.TabIndex = 70;
-            label8.Text = "Поставщик";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(18, 313);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 17);
+            this.label8.TabIndex = 70;
+            this.label8.Text = "Поставщик";
             // 
             // cmbProvider
             // 
-            cmbProvider.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbProvider.FormattingEnabled = true;
-            cmbProvider.Location = new Point(219, 414);
-            cmbProvider.Name = "cmbProvider";
-            cmbProvider.Size = new Size(220, 28);
-            cmbProvider.TabIndex = 69;
+            this.cmbProvider.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbProvider.FormattingEnabled = true;
+            this.cmbProvider.Location = new System.Drawing.Point(192, 310);
+            this.cmbProvider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbProvider.Name = "cmbProvider";
+            this.cmbProvider.Size = new System.Drawing.Size(193, 25);
+            this.cmbProvider.TabIndex = 69;
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(20, 362);
-            label7.Name = "label7";
-            label7.Size = new Size(125, 20);
-            label7.TabIndex = 68;
-            label7.Text = "Производитель";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(18, 272);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 17);
+            this.label7.TabIndex = 68;
+            this.label7.Text = "Производитель";
             // 
             // cmbManufacture
             // 
-            cmbManufacture.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbManufacture.FormattingEnabled = true;
-            cmbManufacture.Location = new Point(219, 359);
-            cmbManufacture.Name = "cmbManufacture";
-            cmbManufacture.Size = new Size(220, 28);
-            cmbManufacture.TabIndex = 67;
+            this.cmbManufacture.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbManufacture.FormattingEnabled = true;
+            this.cmbManufacture.Location = new System.Drawing.Point(192, 269);
+            this.cmbManufacture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbManufacture.Name = "cmbManufacture";
+            this.cmbManufacture.Size = new System.Drawing.Size(193, 25);
+            this.cmbManufacture.TabIndex = 67;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(18, 316);
-            label6.Name = "label6";
-            label6.Size = new Size(168, 20);
-            label6.TabIndex = 66;
-            label6.Text = "Максимальная скидка";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(16, 237);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 17);
+            this.label6.TabIndex = 66;
+            this.label6.Text = "Максимальная скидка";
             // 
             // numericUpDownMaxDiscount
             // 
-            numericUpDownMaxDiscount.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            numericUpDownMaxDiscount.Location = new Point(219, 316);
-            numericUpDownMaxDiscount.Name = "numericUpDownMaxDiscount";
-            numericUpDownMaxDiscount.Size = new Size(220, 28);
-            numericUpDownMaxDiscount.TabIndex = 65;
+            this.numericUpDownMaxDiscount.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownMaxDiscount.Location = new System.Drawing.Point(192, 237);
+            this.numericUpDownMaxDiscount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDownMaxDiscount.Name = "numericUpDownMaxDiscount";
+            this.numericUpDownMaxDiscount.Size = new System.Drawing.Size(192, 24);
+            this.numericUpDownMaxDiscount.TabIndex = 65;
             // 
             // numericUpDownCost
             // 
-            numericUpDownCost.DecimalPlaces = 2;
-            numericUpDownCost.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            numericUpDownCost.Location = new Point(219, 270);
-            numericUpDownCost.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
-            numericUpDownCost.Name = "numericUpDownCost";
-            numericUpDownCost.Size = new Size(220, 28);
-            numericUpDownCost.TabIndex = 64;
+            this.numericUpDownCost.DecimalPlaces = 2;
+            this.numericUpDownCost.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDownCost.Location = new System.Drawing.Point(192, 202);
+            this.numericUpDownCost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDownCost.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDownCost.Name = "numericUpDownCost";
+            this.numericUpDownCost.Size = new System.Drawing.Size(192, 24);
+            this.numericUpDownCost.TabIndex = 64;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(18, 272);
-            label5.Name = "label5";
-            label5.Size = new Size(86, 20);
-            label5.TabIndex = 63;
-            label5.Text = "Стоимость";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(16, 204);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 17);
+            this.label5.TabIndex = 63;
+            this.label5.Text = "Стоимость";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(18, 225);
-            label4.Name = "label4";
-            label4.Size = new Size(154, 20);
-            label4.TabIndex = 62;
-            label4.Text = "Единица измерения";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(16, 169);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 17);
+            this.label4.TabIndex = 62;
+            this.label4.Text = "Единица измерения";
             // 
             // txtBoxMeasure
             // 
-            txtBoxMeasure.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtBoxMeasure.Location = new Point(219, 222);
-            txtBoxMeasure.Name = "txtBoxMeasure";
-            txtBoxMeasure.Size = new Size(220, 28);
-            txtBoxMeasure.TabIndex = 61;
+            this.txtBoxMeasure.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxMeasure.Location = new System.Drawing.Point(192, 166);
+            this.txtBoxMeasure.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxMeasure.Name = "txtBoxMeasure";
+            this.txtBoxMeasure.Size = new System.Drawing.Size(193, 24);
+            this.txtBoxMeasure.TabIndex = 61;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(18, 181);
-            label3.Name = "label3";
-            label3.Size = new Size(117, 20);
-            label3.TabIndex = 60;
-            label3.Text = "Наименование";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(16, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "Наименование";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(20, 143);
-            label2.Name = "label2";
-            label2.Size = new Size(70, 20);
-            label2.TabIndex = 59;
-            label2.Text = "Артикул";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(18, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Артикул";
             // 
             // txtBoxName
             // 
-            txtBoxName.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtBoxName.Location = new Point(219, 178);
-            txtBoxName.Name = "txtBoxName";
-            txtBoxName.Size = new Size(220, 28);
-            txtBoxName.TabIndex = 58;
+            this.txtBoxName.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxName.Location = new System.Drawing.Point(192, 134);
+            this.txtBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxName.Name = "txtBoxName";
+            this.txtBoxName.Size = new System.Drawing.Size(193, 24);
+            this.txtBoxName.TabIndex = 58;
             // 
             // txtBoxArticle
             // 
-            txtBoxArticle.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtBoxArticle.Location = new Point(219, 140);
-            txtBoxArticle.Name = "txtBoxArticle";
-            txtBoxArticle.Size = new Size(220, 28);
-            txtBoxArticle.TabIndex = 57;
+            this.txtBoxArticle.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxArticle.Location = new System.Drawing.Point(192, 105);
+            this.txtBoxArticle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxArticle.Name = "txtBoxArticle";
+            this.txtBoxArticle.Size = new System.Drawing.Size(193, 24);
+            this.txtBoxArticle.TabIndex = 57;
             // 
             // FormProductChange
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1020, 737);
-            Controls.Add(btnEdit);
-            Controls.Add(label14);
-            Controls.Add(txtBoxDescription);
-            Controls.Add(label13);
-            Controls.Add(cmbStatus);
-            Controls.Add(txtBoxImage);
-            Controls.Add(label12);
-            Controls.Add(label11);
-            Controls.Add(numericUpDownQuantityInStock);
-            Controls.Add(label10);
-            Controls.Add(numericUpDownDiscount);
-            Controls.Add(label9);
-            Controls.Add(cmbCategory);
-            Controls.Add(label8);
-            Controls.Add(cmbProvider);
-            Controls.Add(label7);
-            Controls.Add(cmbManufacture);
-            Controls.Add(label6);
-            Controls.Add(numericUpDownMaxDiscount);
-            Controls.Add(numericUpDownCost);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(txtBoxMeasure);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(txtBoxName);
-            Controls.Add(txtBoxArticle);
-            Controls.Add(panel1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "FormProductChange";
-            Text = "FromProductChange";
-            Load += FormProductChange_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownQuantityInStock).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownDiscount).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownMaxDiscount).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownCost).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(892, 553);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtBoxDescription);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.cmbStatus);
+            this.Controls.Add(this.txtBoxImage);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.numericUpDownQuantityInStock);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.numericUpDownDiscount);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cmbCategory);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cmbProvider);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cmbManufacture);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.numericUpDownMaxDiscount);
+            this.Controls.Add(this.numericUpDownCost);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtBoxMeasure);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtBoxName);
+            this.Controls.Add(this.txtBoxArticle);
+            this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FormProductChange";
+            this.Text = "FromProductChange";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantityInStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxDiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCost)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

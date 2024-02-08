@@ -18,6 +18,7 @@ namespace krasotkaa
         public FormProductChange(Product item, FormProducts formProducts)
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(255,255,255);
             Item = item;
             FormProducts = formProducts;
             LoadData();
@@ -65,21 +66,21 @@ namespace krasotkaa
             txtBoxDescription.Text = Item.ProductDescription;
         }
 
-        //private bool Validation()
-        //{
-        //    if (txtBoxArticle.Text == "" || txtBoxDescription.Text == "" || txtBoxMeasure.Text == "" || txtBoxName.Text == "")
-        //    {
-        //        MessageBox.Show($"Не все поля заполнены!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return false;
-        //    }
-        //    else
-        //        return true;
-        //}
+        private bool Validation()
+        {
+            if (txtBoxArticle.Text == "" || txtBoxDescription.Text == "" || txtBoxMeasure.Text == "" || txtBoxName.Text == "")
+            {
+                MessageBox.Show($"Не все поля заполнены!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+                return true;
+        }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            //if (Validation())
-            //{
+            if (Validation())
+            {
                 using (DB_AleynikovContext db = new DB_AleynikovContext())
                 {
                     Item.ProductArticleNumber = txtBoxArticle.Text;
@@ -98,10 +99,11 @@ namespace krasotkaa
 
                     db.Products.Update(Item);
                     db.SaveChanges();
+                    MessageBox.Show($"Товар успешно отредактирован", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FormProducts.LoadData();
                     Close();
                 }
-            //}
+            }
         }
 
         private void FormProductChange_Load(object sender, EventArgs e)
@@ -109,6 +111,9 @@ namespace krasotkaa
 
         }
 
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

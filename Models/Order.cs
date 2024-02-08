@@ -17,7 +17,6 @@ namespace krasotkaa.Context
         public string OrderCodeForGet { get; set; } = null!;
         public int OrderStatus { get; set; }
 
-        public virtual Product OrderCompositionNavigation { get; set; } = null!;
         public virtual PickPoint OrderPickPointNavigation { get; set; } = null!;
         public virtual StatusOfOrder OrderStatusNavigation { get; set; } = null!;
     }

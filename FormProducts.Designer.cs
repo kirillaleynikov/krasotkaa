@@ -29,245 +29,278 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProducts));
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            cmbFiltr = new ComboBox();
-            lblUser = new Label();
-            groupBox1 = new GroupBox();
-            cmbSort = new ComboBox();
-            label1 = new Label();
-            txtBoxSearch = new TextBox();
-            btnAddProduct = new Button();
-            groupBox2 = new GroupBox();
-            label3 = new Label();
-            groupBox3 = new GroupBox();
-            pictureBox1 = new PictureBox();
-            label2 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            btnExit = new Button();
-            statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            statusStrip1.SuspendLayout();
-            SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cmbFiltr = new System.Windows.Forms.ComboBox();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbSort = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxSearch = new System.Windows.Forms.TextBox();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnOrders = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.BorderStyle = BorderStyle.FixedSingle;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(19, 130);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(879, 461);
-            flowLayoutPanel1.TabIndex = 0;
-            flowLayoutPanel1.WrapContents = false;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 98);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(769, 346);
+            this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
             // cmbFiltr
             // 
-            cmbFiltr.FormattingEnabled = true;
-            cmbFiltr.Items.AddRange(new object[] { "Все диапазоны", "0 - 9,99%", "10 - 14,99%", "15% и более" });
-            cmbFiltr.Location = new Point(6, 46);
-            cmbFiltr.Name = "cmbFiltr";
-            cmbFiltr.Size = new Size(172, 28);
-            cmbFiltr.TabIndex = 1;
-            cmbFiltr.SelectedIndexChanged += cmbFiltr_SelectedIndexChanged;
+            this.cmbFiltr.FormattingEnabled = true;
+            this.cmbFiltr.Items.AddRange(new object[] {
+            "Все диапазоны",
+            "0 - 9,99%",
+            "10 - 14,99%",
+            "15% и более"});
+            this.cmbFiltr.Location = new System.Drawing.Point(5, 34);
+            this.cmbFiltr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbFiltr.Name = "cmbFiltr";
+            this.cmbFiltr.Size = new System.Drawing.Size(151, 25);
+            this.cmbFiltr.TabIndex = 1;
             // 
             // lblUser
             // 
-            lblUser.AutoSize = true;
-            lblUser.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblUser.Location = new Point(19, 29);
-            lblUser.Name = "lblUser";
-            lblUser.Size = new Size(42, 20);
-            lblUser.TabIndex = 2;
-            lblUser.Text = "User";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUser.Location = new System.Drawing.Point(17, 22);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(35, 17);
+            this.lblUser.TabIndex = 2;
+            this.lblUser.Text = "User";
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(cmbSort);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(904, 130);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(184, 90);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Сортировка";
+            this.groupBox1.Controls.Add(this.cmbSort);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Location = new System.Drawing.Point(791, 98);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(161, 68);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Сортировка";
             // 
             // cmbSort
             // 
-            cmbSort.FormattingEnabled = true;
-            cmbSort.Items.AddRange(new object[] { "--Не выбрано--", "По возрастанию", "По убыванию" });
-            cmbSort.Location = new Point(6, 46);
-            cmbSort.Name = "cmbSort";
-            cmbSort.Size = new Size(172, 28);
-            cmbSort.TabIndex = 1;
-            cmbSort.SelectedIndexChanged += cmbSort_SelectedIndexChanged;
+            this.cmbSort.FormattingEnabled = true;
+            this.cmbSort.Items.AddRange(new object[] {
+            "--Не выбрано--",
+            "По возрастанию",
+            "По убыванию"});
+            this.cmbSort.Location = new System.Drawing.Point(5, 34);
+            this.cmbSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbSort.Name = "cmbSort";
+            this.cmbSort.Size = new System.Drawing.Size(151, 25);
+            this.cmbSort.TabIndex = 1;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(115, 20);
-            label1.TabIndex = 0;
-            label1.Text = "По стоимости";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "По стоимости";
             // 
             // txtBoxSearch
             // 
-            txtBoxSearch.Location = new Point(6, 35);
-            txtBoxSearch.Name = "txtBoxSearch";
-            txtBoxSearch.Size = new Size(172, 28);
-            txtBoxSearch.TabIndex = 4;
-            txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
+            this.txtBoxSearch.Location = new System.Drawing.Point(5, 26);
+            this.txtBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxSearch.Name = "txtBoxSearch";
+            this.txtBoxSearch.Size = new System.Drawing.Size(151, 24);
+            this.txtBoxSearch.TabIndex = 4;
             // 
             // btnAddProduct
             // 
-            btnAddProduct.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAddProduct.Location = new Point(904, 418);
-            btnAddProduct.Name = "btnAddProduct";
-            btnAddProduct.Size = new Size(184, 29);
-            btnAddProduct.TabIndex = 6;
-            btnAddProduct.Text = "Добавить товар";
-            btnAddProduct.UseVisualStyleBackColor = true;
-            btnAddProduct.Click += btnAddProduct_Click;
+            this.btnAddProduct.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddProduct.Location = new System.Drawing.Point(791, 314);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(161, 29);
+            this.btnAddProduct.TabIndex = 6;
+            this.btnAddProduct.Text = "Добавить товар";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click_1);
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(cmbFiltr);
-            groupBox2.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(904, 226);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(184, 90);
-            groupBox2.TabIndex = 7;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Фильтрация";
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.cmbFiltr);
+            this.groupBox2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Location = new System.Drawing.Point(791, 170);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(161, 68);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Фильтрация";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(6, 23);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 20);
-            label3.TabIndex = 0;
-            label3.Text = "По скидке";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "По скидке";
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(txtBoxSearch);
-            groupBox3.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox3.Location = new Point(904, 322);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(184, 90);
-            groupBox3.TabIndex = 4;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Поиск";
+            this.groupBox3.Controls.Add(this.txtBoxSearch);
+            this.groupBox3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox3.Location = new System.Drawing.Point(791, 242);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(161, 68);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Поиск";
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(904, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(184, 105);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(791, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(161, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(19, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(117, 20);
-            label2.TabIndex = 9;
-            label2.Text = "Пользователь:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(17, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Пользователь:";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(753, 9);
-            label4.Name = "label4";
-            label4.Size = new Size(145, 42);
-            label4.TabIndex = 10;
-            label4.Text = "Красотка";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(659, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 33);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Красотка";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(541, 51);
-            label5.Name = "label5";
-            label5.Size = new Size(357, 20);
-            label5.TabIndex = 11;
-            label5.Text = "Магазин по продаже косметики и парфюмерии";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(473, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(287, 17);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Магазин по продаже косметики и парфюмерии";
             // 
             // btnExit
             // 
-            btnExit.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnExit.Location = new Point(19, 52);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(94, 29);
-            btnExit.TabIndex = 12;
-            btnExit.Text = "Выйти";
-            btnExit.UseVisualStyleBackColor = true;
-            btnExit.Click += btnExit_Click;
+            this.btnExit.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExit.Location = new System.Drawing.Point(17, 41);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(82, 27);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.Text = "Выйти";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // statusStrip1
             // 
-            statusStrip1.ImageScalingSize = new Size(20, 20);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 619);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(1100, 26);
-            statusStrip1.TabIndex = 13;
-            statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 462);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(962, 22);
+            this.statusStrip1.TabIndex = 13;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
-            toolStripStatusLabel1.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(163, 20);
-            toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(132, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // btnOrders
+            // 
+            this.btnOrders.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOrders.Location = new System.Drawing.Point(791, 359);
+            this.btnOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Size = new System.Drawing.Size(161, 27);
+            this.btnOrders.TabIndex = 14;
+            this.btnOrders.Text = "Заказы";
+            this.btnOrders.UseVisualStyleBackColor = true;
+            this.btnOrders.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormProducts
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1100, 645);
-            Controls.Add(statusStrip1);
-            Controls.Add(btnExit);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label2);
-            Controls.Add(pictureBox1);
-            Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
-            Controls.Add(btnAddProduct);
-            Controls.Add(groupBox1);
-            Controls.Add(lblUser);
-            Controls.Add(flowLayoutPanel1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "FormProducts";
-            Text = "Products";
-            Load += FormProducts_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            statusStrip1.ResumeLayout(false);
-            statusStrip1.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(962, 484);
+            this.Controls.Add(this.btnOrders);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btnAddProduct);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FormProducts";
+            this.Text = "Products";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -290,5 +323,6 @@
         private Button btnExit;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private Button btnOrders;
     }
 }

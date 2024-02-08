@@ -28,161 +28,164 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            picBoxTovar = new PictureBox();
-            lblName = new Label();
-            lblDescription = new Label();
-            lblManufacture = new Label();
-            lblPrice = new Label();
-            lblDiscount = new Label();
-            btnChange = new Button();
-            btnDelete = new Button();
-            btnOrder = new Button();
-            label1 = new Label();
-            AddToOrderContextMenuStrip1 = new ContextMenuStrip(components);
-            добавитьКЗаказуToolStripMenuItem = new ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)picBoxTovar).BeginInit();
-            AddToOrderContextMenuStrip1.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.picBoxTovar = new System.Windows.Forms.PictureBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblManufacture = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblDiscount = new System.Windows.Forms.Label();
+            this.btnChange = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AddToOrderContextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.добавитьКЗаказуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxTovar)).BeginInit();
+            this.AddToOrderContextMenuStrip1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // picBoxTovar
             // 
-            picBoxTovar.Image = Properties.Resources.picture;
-            picBoxTovar.Location = new Point(3, 3);
-            picBoxTovar.Name = "picBoxTovar";
-            picBoxTovar.Size = new Size(184, 120);
-            picBoxTovar.SizeMode = PictureBoxSizeMode.StretchImage;
-            picBoxTovar.TabIndex = 0;
-            picBoxTovar.TabStop = false;
+            this.picBoxTovar.Image = global::krasotkaa.Properties.Resources.picture;
+            this.picBoxTovar.Location = new System.Drawing.Point(3, 2);
+            this.picBoxTovar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBoxTovar.Name = "picBoxTovar";
+            this.picBoxTovar.Size = new System.Drawing.Size(161, 90);
+            this.picBoxTovar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxTovar.TabIndex = 0;
+            this.picBoxTovar.TabStop = false;
             // 
             // lblName
             // 
-            lblName.AutoSize = true;
-            lblName.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblName.Location = new Point(193, 3);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(117, 20);
-            lblName.TabIndex = 1;
-            lblName.Text = "Наименование";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblName.Location = new System.Drawing.Point(169, 2);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(93, 17);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Наименование";
             // 
             // lblDescription
             // 
-            lblDescription.AutoSize = true;
-            lblDescription.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDescription.Location = new Point(193, 23);
-            lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(83, 20);
-            lblDescription.TabIndex = 2;
-            lblDescription.Text = "Описание";
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDescription.Location = new System.Drawing.Point(169, 17);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(67, 17);
+            this.lblDescription.TabIndex = 2;
+            this.lblDescription.Text = "Описание";
             // 
             // lblManufacture
             // 
-            lblManufacture.AutoSize = true;
-            lblManufacture.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblManufacture.Location = new Point(193, 43);
-            lblManufacture.Name = "lblManufacture";
-            lblManufacture.Size = new Size(125, 20);
-            lblManufacture.TabIndex = 3;
-            lblManufacture.Text = "Производитель";
+            this.lblManufacture.AutoSize = true;
+            this.lblManufacture.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblManufacture.Location = new System.Drawing.Point(169, 32);
+            this.lblManufacture.Name = "lblManufacture";
+            this.lblManufacture.Size = new System.Drawing.Size(99, 17);
+            this.lblManufacture.TabIndex = 3;
+            this.lblManufacture.Text = "Производитель";
             // 
             // lblPrice
             // 
-            lblPrice.AutoSize = true;
-            lblPrice.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPrice.Location = new Point(193, 64);
-            lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(45, 20);
-            lblPrice.TabIndex = 4;
-            lblPrice.Text = "Цена";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPrice.Location = new System.Drawing.Point(169, 48);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(36, 17);
+            this.lblPrice.TabIndex = 4;
+            this.lblPrice.Text = "Цена";
             // 
             // lblDiscount
             // 
-            lblDiscount.AutoSize = true;
-            lblDiscount.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDiscount.Location = new Point(599, 52);
-            lblDiscount.Name = "lblDiscount";
-            lblDiscount.Size = new Size(114, 20);
-            lblDiscount.TabIndex = 5;
-            lblDiscount.Text = "Размер скидки";
+            this.lblDiscount.AutoSize = true;
+            this.lblDiscount.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDiscount.Location = new System.Drawing.Point(524, 39);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(91, 17);
+            this.lblDiscount.TabIndex = 5;
+            this.lblDiscount.Text = "Размер скидки";
             // 
             // btnChange
             // 
-            btnChange.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnChange.Location = new Point(293, 94);
-            btnChange.Name = "btnChange";
-            btnChange.Size = new Size(159, 29);
-            btnChange.TabIndex = 6;
-            btnChange.Text = "Редактировать";
-            btnChange.UseVisualStyleBackColor = true;
-            btnChange.Click += btnChange_Click;
+            this.btnChange.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnChange.Location = new System.Drawing.Point(256, 70);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(139, 25);
+            this.btnChange.TabIndex = 6;
+            this.btnChange.Text = "Редактировать";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click_1);
             // 
             // btnDelete
             // 
-            btnDelete.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDelete.Location = new Point(193, 94);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(94, 29);
-            btnDelete.TabIndex = 7;
-            btnDelete.Text = "Удалить";
-            btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
+            this.btnDelete.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.Location = new System.Drawing.Point(170, 70);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(82, 25);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Удалить";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnOrder
             // 
-            btnOrder.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnOrder.Location = new Point(458, 94);
-            btnOrder.Name = "btnOrder";
-            btnOrder.Size = new Size(94, 29);
-            btnOrder.TabIndex = 8;
-            btnOrder.Text = "Заказать";
-            btnOrder.UseVisualStyleBackColor = true;
-            btnOrder.Click += btnOrder_Click;
+            this.btnOrder.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOrder.Location = new System.Drawing.Point(401, 70);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(82, 25);
+            this.btnOrder.TabIndex = 8;
+            this.btnOrder.Text = "Заказать";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click_1);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(533, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(60, 20);
-            label1.TabIndex = 9;
-            label1.Text = "Скидка:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(466, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Скидка:";
             // 
             // AddToOrderContextMenuStrip1
             // 
-            AddToOrderContextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            AddToOrderContextMenuStrip1.Items.AddRange(new ToolStripItem[] { добавитьКЗаказуToolStripMenuItem });
-            AddToOrderContextMenuStrip1.Name = "contextMenuStrip1";
-            AddToOrderContextMenuStrip1.Size = new Size(205, 28);
-            AddToOrderContextMenuStrip1.Opening += AddToOrderContextMenuStrip1_Opening;
-            AddToOrderContextMenuStrip1.Click += AddToOrderContextMenuStrip1_Click;
+            this.AddToOrderContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.AddToOrderContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьКЗаказуToolStripMenuItem});
+            this.AddToOrderContextMenuStrip1.Name = "contextMenuStrip1";
+            this.AddToOrderContextMenuStrip1.Size = new System.Drawing.Size(173, 26);
             // 
             // добавитьКЗаказуToolStripMenuItem
             // 
-            добавитьКЗаказуToolStripMenuItem.Name = "добавитьКЗаказуToolStripMenuItem";
-            добавитьКЗаказуToolStripMenuItem.Size = new Size(204, 24);
-            добавитьКЗаказуToolStripMenuItem.Text = "Добавить к заказу";
-            добавитьКЗаказуToolStripMenuItem.Click += добавитьКЗаказуToolStripMenuItem_Click;
+            this.добавитьКЗаказуToolStripMenuItem.Name = "добавитьКЗаказуToolStripMenuItem";
+            this.добавитьКЗаказуToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.добавитьКЗаказуToolStripMenuItem.Text = "Добавить к заказу";
             // 
             // UserControlTovar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
-            Controls.Add(btnOrder);
-            Controls.Add(btnDelete);
-            Controls.Add(btnChange);
-            Controls.Add(lblDiscount);
-            Controls.Add(lblPrice);
-            Controls.Add(lblManufacture);
-            Controls.Add(lblDescription);
-            Controls.Add(lblName);
-            Controls.Add(picBoxTovar);
-            Name = "UserControlTovar";
-            Size = new Size(831, 136);
-            ((System.ComponentModel.ISupportInitialize)picBoxTovar).EndInit();
-            AddToOrderContextMenuStrip1.ResumeLayout(false);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnChange);
+            this.Controls.Add(this.lblDiscount);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.lblManufacture);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.picBoxTovar);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "UserControlTovar";
+            this.Size = new System.Drawing.Size(727, 102);
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxTovar)).EndInit();
+            this.AddToOrderContextMenuStrip1.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using krasotkaa.Context;
 using krasotkaa.Properties;
 using Microsoft.EntityFrameworkCore.Metadata;
+using SaleLibrary;
 
 namespace krasotkaa
 {
@@ -25,6 +26,10 @@ namespace krasotkaa
         public UserControlTovar(Product item, FormProducts form, int role, string user)
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(255, 255, 255);
+            btnChange.BackColor = Color.FromArgb(255, 204, 153);
+            btnDelete.BackColor = Color.FromArgb(255, 204, 153);
+            btnOrder.BackColor = Color.FromArgb(255, 204, 153);
             Item = item;
             FormProducts = form;
             Role = role;
@@ -47,7 +52,7 @@ namespace krasotkaa
 
             lblName.Text = Item.ProductName;
             lblDescription.Text = Item.ProductDescription;
-            lblManufacture.Text += " " + GetManufacture();
+            lblManufacture.Text = Item.ProductManufacturerNavigation.ManufactureName;
             lblPrice.Text = Item.ProductCost.ToString();
             lblDiscount.Text = Item.ProductDiscountAmount.ToString() + "%";
 
@@ -55,7 +60,7 @@ namespace krasotkaa
             {
                 lblPrice.Font = new Font(lblPrice.Font, FontStyle.Strikeout);
                 Label label = new Label();
-                label.Text = Math.Round(Item.ProductCost - (Item.ProductCost * Item.ProductDiscountAmount / 100)) + " руб";
+                label.Text = Math.Round(Item.ProductCost - DiscountCalculation.Discount(Item.ProductCost, (int)Item.ProductDiscountAmount), 2).ToString() + " руб";
                 label.Location = new Point(lblPrice.Location.X + lblPrice.Width, lblPrice.Location.Y);
                 label.Font = new Font(lblPrice.Font, FontStyle.Regular);
                 label.AutoSize = true;
@@ -88,19 +93,18 @@ namespace krasotkaa
             }
         }
 
-        private string GetManufacture()
-        {
-            using (DB_AleynikovContext db = new DB_AleynikovContext())
-            {
-                var manufacture = db.Manufactures.FirstOrDefault(x => x.ManufactureId == Item.ProductManufacturer);
-                return manufacture!.ManufactureName;
-            }
-        }
+        //private string GetManufacture()
+        //{
+        //    using (BloggingContext db = new BloggingContext())
+        //    {
+        //        var manufacture = db.Manufactures.FirstOrDefault(x => x.ManufactureId == Item.ProductManufacturer);
+        //        return manufacture!.ManufactureName;
+        //    }
+        //}
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            FormProductChange form = new FormProductChange(Item, FormProducts);
-            form.ShowDialog();
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -134,8 +138,19 @@ namespace krasotkaa
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnOrder_Click_1(object sender, EventArgs e)
+        {
             FormOrder formOrder = new FormOrder(Item, FormProducts);
             formOrder.ShowDialog();
+        }
+
+        private void btnChange_Click_1(object sender, EventArgs e)
+        {
+            FormProductChange form = new FormProductChange(Item, FormProducts);
+            form.ShowDialog();
         }
     }
 }

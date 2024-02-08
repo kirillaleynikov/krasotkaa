@@ -18,6 +18,7 @@ namespace krasotkaa
         public AddForm(FormProducts form)
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(255, 255, 255);
             FormProducts = form;
             LoadData();
             panel1.BackColor = Color.FromArgb(255, 204, 153);

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
 using krasotkaa.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace krasotkaa
 {
@@ -20,6 +21,9 @@ namespace krasotkaa
         public FormProducts(string user, int id)
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(255, 255, 255);
+            btnExit.BackColor = Color.FromArgb(255, 204, 153);
+            btnAddProduct.BackColor = Color.FromArgb(255, 204, 153);
             User = user;
             Role = id;
             LoadData();
@@ -31,7 +35,7 @@ namespace krasotkaa
             flowLayoutPanel1.Controls.Clear();
             using (DB_AleynikovContext db = new DB_AleynikovContext())
             {
-                List<Product> products = db.Products.ToList();
+                List<Product> products = db.Products.Include(x => x.ProductManufacturerNavigation).ToList();
                 var countItems = products.Count;
                 if (products == null) return;
                 switch (cmbSort.SelectedIndex)
@@ -70,8 +74,8 @@ namespace krasotkaa
                 lblUser.Text = User;
             switch (Role)
             {
-                case 0: btnAddProduct.Visible = false; break;
-                case 1: btnAddProduct.Visible = false; break;
+                case 0: btnAddProduct.Visible = false; btnOrders.Visible = false; break;
+                case 1: btnAddProduct.Visible = false; btnOrders.Visible = false; break;
                 case 2: btnAddProduct.Visible = false; break;
                 case 3: btnAddProduct.Visible = true; break;
             }
@@ -103,8 +107,7 @@ namespace krasotkaa
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            AddForm addForm = new AddForm(this);
-            addForm.ShowDialog();
+           
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -112,6 +115,25 @@ namespace krasotkaa
             Close();
             Form form = Application.OpenForms[0];
             form.Show();
+        }
+
+        private void btnAddProduct_Click_1(object sender, EventArgs e)
+        {
+            AddForm addForm = new AddForm(this);
+            addForm.ShowDialog();
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            Close();
+            Form form = Application.OpenForms[0];
+            form.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OrdersForm ordersForm = new OrdersForm();
+            ordersForm.ShowDialog();
         }
     }
 }

@@ -5,11 +5,6 @@ namespace krasotkaa.Context
 {
     public partial class Product
     {
-        public Product()
-        {
-            Orders = new HashSet<Order>();
-        }
-
         public string ProductArticleNumber { get; set; } = null!;
         public string ProductName { get; set; } = null!;
         public string ProductMeasurement { get; set; } = null!;
@@ -22,12 +17,11 @@ namespace krasotkaa.Context
         public int ProductQuantityInStock { get; set; }
         public string ProductDescription { get; set; } = null!;
         public string? ProductPhoto { get; set; }
-        public int? ProductStatus { get; set; }
+        public int ProductStatus { get; set; }
 
         public virtual CategoryOfProduct ProductCategoryNavigation { get; set; } = null!;
         public virtual Manufacture ProductManufacturerNavigation { get; set; } = null!;
         public virtual Provider ProductProviderNavigation { get; set; } = null!;
-        public virtual StatusOfProduct? ProductStatusNavigation { get; set; }
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual StatusOfProduct ProductStatusNavigation { get; set; } = null!;
     }
 }
