@@ -99,7 +99,7 @@
             // 
             lblDiscount.AutoSize = true;
             lblDiscount.Font = new Font("Comic Sans MS", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDiscount.Location = new Point(368, 64);
+            lblDiscount.Location = new Point(599, 52);
             lblDiscount.Name = "lblDiscount";
             lblDiscount.Size = new Size(114, 20);
             lblDiscount.TabIndex = 5;
@@ -136,11 +136,12 @@
             btnOrder.TabIndex = 8;
             btnOrder.Text = "Заказать";
             btnOrder.UseVisualStyleBackColor = true;
+            btnOrder.Click += btnOrder_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(302, 64);
+            label1.Location = new Point(533, 52);
             label1.Name = "label1";
             label1.Size = new Size(60, 20);
             label1.TabIndex = 9;
@@ -151,15 +152,16 @@
             AddToOrderContextMenuStrip1.ImageScalingSize = new Size(20, 20);
             AddToOrderContextMenuStrip1.Items.AddRange(new ToolStripItem[] { добавитьКЗаказуToolStripMenuItem });
             AddToOrderContextMenuStrip1.Name = "contextMenuStrip1";
-            AddToOrderContextMenuStrip1.Size = new Size(211, 56);
+            AddToOrderContextMenuStrip1.Size = new Size(205, 28);
             AddToOrderContextMenuStrip1.Opening += AddToOrderContextMenuStrip1_Opening;
             AddToOrderContextMenuStrip1.Click += AddToOrderContextMenuStrip1_Click;
             // 
             // добавитьКЗаказуToolStripMenuItem
             // 
             добавитьКЗаказуToolStripMenuItem.Name = "добавитьКЗаказуToolStripMenuItem";
-            добавитьКЗаказуToolStripMenuItem.Size = new Size(210, 24);
+            добавитьКЗаказуToolStripMenuItem.Size = new Size(204, 24);
             добавитьКЗаказуToolStripMenuItem.Text = "Добавить к заказу";
+            добавитьКЗаказуToolStripMenuItem.Click += добавитьКЗаказуToolStripMenuItem_Click;
             // 
             // UserControlTovar
             // 

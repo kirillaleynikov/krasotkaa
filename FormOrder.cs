@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,31 +14,41 @@ namespace krasotkaa
 {
     public partial class FormOrder : Form
     {
-        private List<Product>? ProductsInOrder;
+        private Product Item;
         private FormProducts FormProducts;
-        public FormOrder(List<Product> products, FormProducts formProducts)
+        public FormOrder(Product item, FormProducts formProducts)
         {
             InitializeComponent();
-            ProductsInOrder = products;
-            this.FormProducts = formProducts;
+            Random r = new Random();
+            int rOrderNumber = r.Next(100, 1000);
+            int rOrderCode = r.Next(1000, 9000);
+            lblOrderNumber.Text = rOrderNumber.ToString();
+            lblOrderCode.Text = rOrderCode.ToString();
+            Item = item;
+            FormProducts = formProducts;
+            LoadData();
+            LoadItem();
+        }
+
+        private void LoadData()
+        {
+            using (DB_AleynikovContext db = new DB_AleynikovContext())
+            {
+                cmbPickPoint.DataSource = db.PickPoints.ToList();
+                cmbPickPoint.DisplayMember = "PickPointAddress";
+                cmbPickPoint.ValueMember = "PickPointId";
+            }
+        }
+
+        private void LoadItem()
+        {
+            lblOrderName.Text = Item.ProductName;
+            lblPrice.Text = Item.ProductCost.ToString();
         }
 
         private void OrderForm_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void Fill_panel_products()
-        {
-            //flowLayoutPanel1.Controls.Clear();
-            //if(ProductsInOrder != null)
-            //{
-            //    foreach(var product in ProductsInOrder)
-            //    {
-            //        UserControlTovar userControlTovar = new UserControlTovar(product, FormProducts, Role, UserNam);
-            //        flowLayoutPanel1.Controls.Add(userControlTovar);
-            //    }
-            //}
         }
     }
 }

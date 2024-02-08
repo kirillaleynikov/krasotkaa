@@ -21,23 +21,19 @@ namespace krasotkaa
         private FormProducts FormProducts;
         private int Role;
         private string User;
-        private bool ViewOrder;
-        private FormOrder FormOrder;
 
-        public UserControlTovar(Product item, FormProducts form, int role, string user/*, bool viewOrder, FormOrder formOrder*/)
+        public UserControlTovar(Product item, FormProducts form, int role, string user)
         {
             InitializeComponent();
             Item = item;
             FormProducts = form;
             Role = role;
             User = user;
-            //ViewOrder = viewOrder;
-            //FormOrder = formOrder;
 
             CreateItem();
             RoleCheck();
 
-       
+
 
 
         }
@@ -52,22 +48,26 @@ namespace krasotkaa
             lblName.Text = Item.ProductName;
             lblDescription.Text = Item.ProductDescription;
             lblManufacture.Text += " " + GetManufacture();
+            lblPrice.Text = Item.ProductCost.ToString();
             lblDiscount.Text = Item.ProductDiscountAmount.ToString() + "%";
 
-            if (Item.ProductDiscountAmount == 0)
+            if (Item.ProductDiscountAmount > 0)
             {
-                lblPrice.Text += " " + Item.ProductCost.ToString();
-            }
-            else
-            {
-                lblPrice.Text += $" {Item.ProductCost - Item.ProductCost * Item.ProductDiscountAmount / 100}";
+                lblPrice.Font = new Font(lblPrice.Font, FontStyle.Strikeout);
+                Label label = new Label();
+                label.Text = Math.Round(Item.ProductCost - (Item.ProductCost * Item.ProductDiscountAmount / 100)) + " руб";
+                label.Location = new Point(lblPrice.Location.X + lblPrice.Width, lblPrice.Location.Y);
+                label.Font = new Font(lblPrice.Font, FontStyle.Regular);
+                label.AutoSize = true;
+                this.Controls.Add(label);
             }
 
-            if (Item.ProductQuantityInStock == 0)
+            //Перекраска элемента при скидке > 15%
+            if (Item.ProductDiscountAmount > 15)
             {
-                BackColor = Color.LightGray;
-                btnOrder.Enabled = false;
+                this.BackColor = Color.FromArgb(0x7f, 0xff, 0x00);
             }
+
         }
 
         private void RoleCheck()
@@ -105,15 +105,9 @@ namespace krasotkaa
             {
                 using (DB_AleynikovContext db = new DB_AleynikovContext())
                 {
-                    //var item = db.Orders.FirstOrDefault(x => x.OrderComposition == Item.ProductArticleNumber && x.OrderStatus == 2);
-                    //if (item != null)
-                    //{
                     db.Products.Remove(Item);
                     db.SaveChanges();
                     FormProducts.LoadData();
-                    //}
-                    //else
-                    //    MessageBox.Show("Невозможно удалить, так как товар находится в заказе", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -125,7 +119,18 @@ namespace krasotkaa
 
         private void AddToOrderContextMenuStrip1_Click(object sender, EventArgs e)
         {
-          
+
+        }
+
+        private void добавитьКЗаказуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            FormOrder formOrder = new FormOrder(Item, FormProducts);
+            formOrder.ShowDialog();
         }
     }
 }

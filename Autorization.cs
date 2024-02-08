@@ -29,17 +29,6 @@ namespace krasotkaa
             using (DB_AleynikovContext db = new DB_AleynikovContext())
             {
                 var user = db.Users.FirstOrDefault(x => x.UserLogin == txtLogin.Text && x.UserPassword == txtPassword.Text);
-
-                //if (Captcha == true)
-                //{
-                //    if (show_form_captcha() != DialogResult.Yes)
-                //    {
-                //        MessageBox.Show("Неверный логин или пароль!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //        block_btn();
-                //        return;
-                //    }
-                //}
-
                 if (user != null)
                 {
                     var role = db.Roles.FirstOrDefault(x => x.RoleId == user.UserRole);
@@ -51,8 +40,7 @@ namespace krasotkaa
                 else
                 {
                     MessageBox.Show("Неверный логин или пароль!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    if (Captcha) block_btn();
-                    Captcha = true;
+                    block_btn();
                 }
             }
         }
@@ -72,7 +60,6 @@ namespace krasotkaa
             FormProducts form = new FormProducts(UserName!, role);
             form.ShowDialog();
             UserName = null;
-            Captcha = false;
         }
 
         private void btnGuest_Click(object sender, EventArgs e)
@@ -86,7 +73,7 @@ namespace krasotkaa
 
         private void button1_MouseDown(object sender, MouseEventArgs e)
         {
-            //txtPassword.UseSystemPasswordChar = true;
+
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
@@ -108,15 +95,6 @@ namespace krasotkaa
                 timer = 0;
                 btnEnter.Enabled = true;
             }
-        }
-
-        private DialogResult show_form_captcha()
-        {
-            FormCaptcha form = new FormCaptcha();
-            this.Hide();
-            form.ShowDialog();
-            this.Show();
-            return form.DialogResult;
         }
     }
 }

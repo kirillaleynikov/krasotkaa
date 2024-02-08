@@ -22,15 +22,8 @@ namespace krasotkaa
             InitializeComponent();
             User = user;
             Role = id;
-            Init();
             LoadData();
             LoadUser();
-            //LoadComboBox();
-        }
-
-        private void Init()
-        {
-            //cmbFiltr.SelectedIndex = 0;
         }
 
         public void LoadData()
@@ -40,6 +33,7 @@ namespace krasotkaa
             {
                 List<Product> products = db.Products.ToList();
                 var countItems = products.Count;
+                if (products == null) return;
                 switch (cmbSort.SelectedIndex)
                 {
                     case 0: products = db.Products.ToList(); break;
@@ -58,19 +52,13 @@ namespace krasotkaa
                     products = products.Where(x => x.ProductName.ToLower().Contains(txtBoxSearch.Text.ToLower())).ToList();
                 }
 
-                //int id = GetManufacture();
-                //if (id != 0)
-                //    products = products.Where(x => x.ProductManufacturer == id).ToList();
-
                 foreach (Product item in products)
                 {
-                    UserControlTovar control = new UserControlTovar(item, this, Role, User/*, false, new FormOrder(new List<Product>(), new FormProducts(User, Role))*/);
+                    UserControlTovar control = new UserControlTovar(item, this, Role, User);
 
                     flowLayoutPanel1.Controls.Add(control);
                 }
-
                 toolStripStatusLabel1.Text = $"Количество записей: {flowLayoutPanel1.Controls.Count} из {countItems}";
-
             }
 
 
@@ -87,34 +75,11 @@ namespace krasotkaa
                 case 3: btnAddProduct.Visible = true; break;
             }
         }
-
-        //private int GetManufacture()
-        //{
-        //    using (DB_AleynikovContext db = new DB_AleynikovContext())
-        //    {
-        //        var item = db.Manufactures.FirstOrDefault(x => x.ManufactureName == cmbFiltr.SelectedItem);
-        //        if (item != null)
-        //            return item.ManufactureId;
-        //        else
-        //            return 0;
-        //    }
-        //}
         public string GetUser() => User;
         private void cmbFiltr_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadData();
         }
-
-        //private void LoadComboBox()
-        //{
-        //    using (DB_AleynikovContext db = new DB_AleynikovContext())
-        //    {
-        //        var items = db.Manufactures.ToList();
-        //        foreach (var item in items)
-        //            cmbFiltr.Items.Add(item.ManufactureName);
-        //    }
-        //}
-
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
