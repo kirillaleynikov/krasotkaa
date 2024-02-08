@@ -16,6 +16,7 @@ namespace krasotkaa
     {
         private Product Item;
         private FormProducts FormProducts;
+        private Order Order;
         public FormOrder(Product item, FormProducts formProducts)
         {
             InitializeComponent();
@@ -49,6 +50,34 @@ namespace krasotkaa
         private void OrderForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            using (DB_AleynikovContext db = new DB_AleynikovContext())
+            {
+                Order order = new Order();
+                {
+                    Order.OrderNumber = int.Parse(lblOrderNumber.Text);
+                    Order.OrderComposition = lblOrderName.Text;
+                    Order.OrderCost = Convert.ToDouble(lblPrice.Text);
+                    Order.OrderStatus = 1;
+                    Order.OrderClientFio = txtFIO.Text;
+                    Order.OrderCodeForGet = lblOrderCode.Text;
+                    Order.OrderPickPoint = cmbPickPoint.SelectedIndex;
+                    Order.OrderCost = (double)numericUpDownAmount.Value;
+                    Order.OrderDate = dateTimePickerOrderDate.Value;
+                    Order.OrderDeliveryDate = dateTimePickerOrderDateDelivery.Value;
+            };
+                db.Orders.Add(order);
+                db.SaveChanges();
+                FormProducts.LoadData();
+                Close();
+
+
+                
+             
+            }
         }
     }
 }

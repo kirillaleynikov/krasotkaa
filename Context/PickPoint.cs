@@ -11,7 +11,7 @@ namespace krasotkaa.Context
         }
 
         public int PickPointId { get; set; }
-        public int PickPointAddress { get; set; }
+        public string PickPointAddress { get; set; } = null!;
 
         public virtual ICollection<Order> Orders { get; set; }
     }

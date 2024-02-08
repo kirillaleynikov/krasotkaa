@@ -57,7 +57,9 @@ namespace krasotkaa
 
             modelBuilder.Entity<Order>(entity =>
             {
-                entity.Property(e => e.OrderId).HasColumnName("OrderID");
+                entity.Property(e => e.OrderId)
+                    .ValueGeneratedNever()
+                    .HasColumnName("OrderID");
 
                 entity.Property(e => e.OrderClientFio)
                     .HasMaxLength(300)
@@ -86,16 +88,15 @@ namespace krasotkaa
                 entity.HasOne(d => d.OrderStatusNavigation)
                     .WithMany(p => p.Orders)
                     .HasForeignKey(d => d.OrderStatus)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Orders_StatusOfOrder");
             });
 
             modelBuilder.Entity<PickPoint>(entity =>
             {
-                entity.Property(e => e.PickPointCity).HasMaxLength(100);
+                entity.Property(e => e.PickPointId).ValueGeneratedNever();
 
-                entity.Property(e => e.PickPointHouse).HasMaxLength(100);
-
-                entity.Property(e => e.PickPointStreet).HasMaxLength(100);
+                entity.Property(e => e.PickPointAddress).HasMaxLength(500);
             });
 
             modelBuilder.Entity<Product>(entity =>
@@ -150,11 +151,7 @@ namespace krasotkaa
             {
                 entity.ToTable("Role");
 
-                entity.Property(e => e.RoleId).HasColumnName("RoleID");
-
-                entity.Property(e => e.RoleName)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                entity.Property(e => e.RoleName).HasMaxLength(100);
             });
 
             modelBuilder.Entity<StatusOfOrder>(entity =>
@@ -177,8 +174,6 @@ namespace krasotkaa
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.Property(e => e.UserId).HasColumnName("UserID");
-
                 entity.Property(e => e.UserLogin).HasMaxLength(100);
 
                 entity.Property(e => e.UserName).HasMaxLength(100);
@@ -188,12 +183,6 @@ namespace krasotkaa
                 entity.Property(e => e.UserPatronymic).HasMaxLength(100);
 
                 entity.Property(e => e.UserSurname).HasMaxLength(100);
-
-                entity.HasOne(d => d.UserRoleNavigation)
-                    .WithMany(p => p.Users)
-                    .HasForeignKey(d => d.UserRole)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Users__UserRole__398D8EEE");
             });
 
             OnModelCreatingPartial(modelBuilder);

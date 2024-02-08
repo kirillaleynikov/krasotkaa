@@ -186,7 +186,7 @@
             cmbPickPoint.FormattingEnabled = true;
             cmbPickPoint.Location = new Point(183, 270);
             cmbPickPoint.Name = "cmbPickPoint";
-            cmbPickPoint.Size = new Size(151, 28);
+            cmbPickPoint.Size = new Size(378, 28);
             cmbPickPoint.TabIndex = 15;
             // 
             // txtFIO
@@ -222,6 +222,7 @@
             btnOrder.TabIndex = 19;
             btnOrder.Text = "Заказать";
             btnOrder.UseVisualStyleBackColor = true;
+            btnOrder.Click += btnOrder_Click;
             // 
             // FormOrder
             // 
