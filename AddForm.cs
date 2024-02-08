@@ -71,6 +71,7 @@ namespace krasotkaa
                     };
                     db.Products.Add(item);
                     db.SaveChanges();
+                    MessageBox.Show($"Товар успешно добавлен", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FormProducts.LoadData();
                     Close();
                 }
@@ -94,16 +95,13 @@ namespace krasotkaa
 
         private bool Validation()
         {
-            foreach (Control tb in Controls)
+            if (txtBoxArticle.Text == "" || txtBoxDescription.Text == "" || txtBoxMeasure.Text == "" || txtBoxName.Text == "")
             {
-                if (tb is TextBox && string.IsNullOrEmpty(tb.Text))
-                {
-                    if (tb.Name == "txtDescription") continue;
-                    MessageBox.Show($"{tb.Tag} должно быть заполнено.", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
+                MessageBox.Show($"Не все поля заполнены!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
-            return true;
+            else
+                return true;
         }
     }
 }

@@ -70,6 +70,7 @@ namespace krasotkaa
                 lblUser.Text = User;
             switch (Role)
             {
+                case 0: btnAddProduct.Visible = false; break;
                 case 1: btnAddProduct.Visible = false; break;
                 case 2: btnAddProduct.Visible = false; break;
                 case 3: btnAddProduct.Visible = true; break;

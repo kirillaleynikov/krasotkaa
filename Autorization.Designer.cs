@@ -70,7 +70,7 @@
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(184, 35);
             txtLogin.TabIndex = 2;
-            txtLogin.Text = "loginDEbct2018";
+            txtLogin.Text = "loginDEvtg2018";
             // 
             // txtPassword
             // 
@@ -79,7 +79,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(184, 35);
             txtPassword.TabIndex = 3;
-            txtPassword.Text = "Qg3gff";
+            txtPassword.Text = "ETMNzL";
             // 
             // button1
             // 

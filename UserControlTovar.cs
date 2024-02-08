@@ -81,6 +81,11 @@ namespace krasotkaa
             {
                 btnDelete.Visible = false;
             }
+            if (Role == 0)
+            {
+                btnDelete.Visible = false;
+                btnChange.Visible = false;
+            }
         }
 
         private string GetManufacture()

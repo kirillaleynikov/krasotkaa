@@ -65,24 +65,21 @@ namespace krasotkaa
             txtBoxDescription.Text = Item.ProductDescription;
         }
 
-        private bool Validation()
-        {
-            foreach (Control tb in Controls)
-            {
-                if (tb is TextBox && string.IsNullOrEmpty(tb.Text))
-                {
-                    if (tb.Name == "txtDescription") continue;
-                    MessageBox.Show($"{tb.Tag} должно быть заполнено.", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-            }
-            return true;
-        }
+        //private bool Validation()
+        //{
+        //    if (txtBoxArticle.Text == "" || txtBoxDescription.Text == "" || txtBoxMeasure.Text == "" || txtBoxName.Text == "")
+        //    {
+        //        MessageBox.Show($"Не все поля заполнены!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return false;
+        //    }
+        //    else
+        //        return true;
+        //}
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (Validation())
-            {
+            //if (Validation())
+            //{
                 using (DB_AleynikovContext db = new DB_AleynikovContext())
                 {
                     Item.ProductArticleNumber = txtBoxArticle.Text;
@@ -104,7 +101,7 @@ namespace krasotkaa
                     FormProducts.LoadData();
                     Close();
                 }
-            }
+            //}
         }
 
         private void FormProductChange_Load(object sender, EventArgs e)
